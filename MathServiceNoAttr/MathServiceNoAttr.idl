@@ -1,0 +1,36 @@
+// MathServiceNoAttr.idl : MathServiceNoAttr 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(MathServiceNoAttr.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(48CFA781-685C-469F-8AB3-61ADC49F45DA),
+	dual,
+	nonextensible,
+    helpstring("ICalc Interface"),
+	pointer_default(unique)
+]
+interface ICalc : IDispatch{
+};
+
+[
+	uuid(241F21AF-6982-4DAD-A70C-69ABBEF1EAD7),
+	version(1.0),
+]
+library MathServiceNoAttrLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(0089FBD5-452F-4282-8F71-C23C1AFD0ABC)		
+	]
+	coclass Calc
+	{
+		[default] interface ICalc;
+	};
+};
+
